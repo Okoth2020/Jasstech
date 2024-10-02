@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jasttech</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="AboutHeader">
+        <h1>About Jasttech</h1>
+        <div class="link1">
+            <a href="index.html" id="link1">Home</a>
+            <a href="About.html" id="link1">About Us</a>
+            <a href="#" id="link1">Contact Us</a>
+            <a href="#" id="link1">Services</a>
+        </div>
+        <p>Our talented teams offer the best services when it comes to user portfolios and offer amazing experiences for our clients.</p>
+        <img src="placeholder-image.jpg" alt="About Us Image" />
+    </div>
+
+    <!-- Slides -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="https://unsplash.it/400/250" alt="Image 1" />
+                <p class="description">Jasttech Image Description</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://unsplash.it/400/250" alt="Image 2" />
+                <p class="description">Jasttech Image Description</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://unsplash.it/400/250" alt="Image 3" />
+                <p class="description">Jasttech Image Description</p>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="https://unsplash.it/400/250" alt="Image 4" />
+                <p class="description">Jasttech Image Description</p>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="https://unsplash.it/400/250" alt="Image 5" />
+                <p class="description">Jasttech Image Description</p>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="moveSlides(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlides(1)">&#10095;</button>
+    </div>
+
+    <!-- Company Description -->
+    <p>We offer an experience that you will never forget!</p>
+    <p>We are Jasttech company. We specialize in building website portfolios for our clients, and we do so at a good price. We have a team that will see to it that you look good and deliver your portfolio to the best standard that you want.</p>
+
+    <!-- Company Values -->
+    <h2>Company Values</h2>
+    <p>Innovation</p>
+    <p>Quality</p>
+    <p>Transparency</p>
+    <p>Teamwork</p>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jasttech. All rights reserved.</p>
+            <a href="/"><img src="logo.png" alt="Jasttech Logo"></a>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlides(n) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+
+            currentSlide += n;
+
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+
+            slides.style.transform = `translateX(${-currentSlide * 400}px)`;
+        }
+    </script>
+
+</body>
+</html>
